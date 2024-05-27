@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --a: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+.main {
+    display: flex;
+    gap: 8px;
+    margin: 8px;
+}
+
+.left {
+    width: 25vw;
+    height: 88vh;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+.home,
+.library {
+    background-color: #121212;
+    color: white;
+    border-radius: 7px;
+    padding: 8px 12px;
+}
+
+.home {
+    position: relative;
+}
+
+.home ul li {
+    color: rgb(199, 200, 200);
+    display: flex;
+    gap: 15px;
+    width: 24px;
+    list-style: none;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.home ul li:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.home img {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.library {
+    height: 73vh;
+    /* border: 2px solid bisque; */
+}
+
+.library .yourlib img {
+    filter: invert(1);
+    width: 24px;
+    cursor: pointer;
+}
+
+.yourlib {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+}
+
+.yourlib .lib1 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.songlist {
+    /* border: 2px solid chartreuse; */
+    overflow-y: auto;
+    height: 65vh;
+}
+
+.songlist ul {
+    padding: 0px 10px;
+}
+
+.songlist ul li {
+    margin: 10px 0px;
+    background-color: #212121;
+    list-style-position: inside;
+    display: flex;
+    padding: 7px 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(76, 76, 76);
+    justify-content: space-between;
+    align-items: center;
+}
+.songlist ul li:hover{
+    background-color: #4b4b4b;
+}
+
+.songlist ul li>div {
+    display: flex;
+    gap: 20px;
+
+}
+
+.songlist img {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.songlist .info div:nth-child(1) {
+    font-size: 14px;
+    /* width: 10px; */
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songlist .info div:nth-child(2) {
+    font-size: 12px;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right {
+    background-color: #121212;
+    border-radius: 7px;
+    width: 75vw;
+    height: 86vh;
+    /* border: 2px solid blue; */
+    padding: 8px 12px;
+    overflow: scroll;
+}
+
+.right .head {
+    background-color: #212121;
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44.5px;
+    margin-bottom: 40px;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.right .head .arrow img {
+    width: 30px;
+    filter: invert(1);
+    cursor:not-allowed;
+}
+
+.right .head .arrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right .head .side {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.right .head .side .premium {
+    background-color: white;
+    color: #000000;
+    padding: 10px 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.right .head .side .premium:hover {
+    background-color: rgb(244, 241, 241);
+    font-weight: 900;
+}
+
+.right .head .side img {
+    width: 25px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.right .head .side .notification {
+    background-color: black;
+    border-radius: 35px;
+    padding: 2px 8px;
+}
+
+.right .head .side .user {
+    background-color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.right .head .side .user:hover {
+    background-color: rgb(244, 241, 241);
+    font-weight: 900;
+}
+
+.sptply {
+    margin: 20px 10px;
+}
+
+.right .sptply h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.sptply .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sptply .container .cards {
+    /* background-color: aliceblue; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 300ms;
+
+}
+
+.container .cards img {
+    border-radius: 10px;
+}
+
+.container .cards h3 {
+    color: white;
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container .cards p {
+    height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: rgb(179, 179, 179);
+}
+
+.cards .play {
+    position: absolute;
+    top: 150px;
+    right: 15px;
+    opacity: var(--a);
+}
+
+.cards:hover {
+    background-color: #383737;
+    --a: 1;
+}
+
+.line1{
+    margin: 100px 20px 50px 20px;
+    background-color: rgb(84, 82, 82);  
+    border: none; 
+    height: 1px;
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+.footer h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.footer ul li{
+    list-style: none;
+    margin: 6px auto;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #b1b0b0;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.line2{
+    margin: 50px 20px;
+    background-color: rgb(84, 82, 82);  
+    border: none; 
+    height: 1px;
+}
+.policies{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.policies .lists ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.policies .lists ul li a{
+    text-decoration: none;
+    color:  #b1b0b0;
+    font-size: 14px;
+}
+.policies .lists ul li a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.copyright {
+    color: #b1b0b0 ;
+    font-size: 14px;
+}
+.songbar {
+    box-sizing: border-box;
+    width: 95vw;
+    padding: 8px 40px;
+    margin: 8px auto;
+    border-radius: 7px;
+    background-color: rgb(57, 54, 50);
+}
+
+.songbar .sin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songinfo {
+    color: white;
+    font-size: 18px;
+    width: 250px;
+}
+
+.songbar .songbtns {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.songbar img {
+    cursor: pointer;
+    filter: invert(1);
+    width: 30px;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+input[type=range] {
+    cursor: pointer;
+    accent-color: rgb(6 189 91);
+}
+
+.seekdur {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.currenttime,
+.duration {
+    color: rgb(198, 197, 197);
+    font-size: 15px;
+}
+
+.seekbar {
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.seekbar .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s ease;
+}
+
+@media only screen and (max-width : 1000px) {
+    .left {
+        position: absolute;
+        left: -150%;
+        transition: left 500ms;
+        background-color: black;
+        z-index: 1;
+        width: 350px;
+        border: 3px solid rgb(70, 70, 70);
+        border-radius: 8px;
+    }
+
+    .right {
+        width: 99vw;
+    }
+
+    .menu {
+        display: inline;
+    }
+
+    .cross {
+        display: inline;
+    }
+
+    .arr {
+        display: none;
+    }
+
+    .songinfo {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width : 650px) {
+    .right .head {
+        padding: 10px 12px;
+        height: 35px;
+    }
+
+    .right .head .side {
+        gap: 10px;
+    }
+
+    .right .head .side .premium {
+        padding: 8px 12px;
+        font-weight: 700;
+        border-radius: 18px;
+        font-size: 12px;
+    }
+
+    .right .head .side .premium:hover {
+        font-weight: 800;
+    }
+
+    .right .head .side .user {
+        padding: 8px 12px;
+        font-weight: 700;
+        border-radius: 18px;
+        font-size: 12px;
+    }
+
+    .right .head .side .user:hover {
+        font-weight: 800;
+    }
+    .sptply .container {
+        justify-content: center;
+    }
+    .footer {
+        grid-template-columns: repeat(2,1fr);
+        justify-items: start;
+    }
+
+    .footer ul li{
+        margin: 4px auto;
+    }
+
+    .policies{
+        margin: 30px 10px;
+        display: block;
+    }
+    .copyright {
+        margin: 10px auto;
+    }
+
+
+    .songbar {
+        padding: 5px 20px;
+        margin: 6px auto;
+    }
+
+    .songinfo {
+        font-size: 14px;
+    }
+
+    .currenttime,
+    .duration {
+        font-size: 12px;
+    }
+
+    .songbar .songbtns {
+        gap: 13px;
+    }
+
+    .songbar img {
+        width: 23px;
+    }
+
+    .volume {
+        gap: 2px;
+    }
+
+    input[type=range] {
+        width: 100px;
+    }
+
+    .seekbar {
+        height: 2px;
+        margin: 6px auto;
+    }
+
+    .seekbar .circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .right .sptply h2 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .sptply .container .cards {
+        height: 230px;
+    }
+
+    .container .cards h3 {
+        padding: 8px 0px 0px 0px;
+        font-size: 14px;
+    }
+
+    .container .cards p {
+        font-size: 12px;
+    }
+
+    input[type=range] {
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .songbar .songbtns {
+        gap: 10px;
+    }
+
+    .songbar img {
+        width: 20px;
+    }
+
+    .volume {
+        gap: 1px;
+    }
+
+    input[type=range] {
+        width: 40px;
+    }
+
+    .right .head {
+        padding: 10px 8px;
+    }
+
+    .right .head .side {
+        gap: 8px;
+    }
+
+    .right .head .side .premium {
+        padding: 6px 8px;
+        font-weight: 700;
+        border-radius: 15px;
+        font-size: 10px;
+    }
+
+    .right .head .side .user {
+        padding: 6px 8px;
+        font-weight: 700;
+        border-radius: 15px;
+        font-size: 10px;
+    }
+}
